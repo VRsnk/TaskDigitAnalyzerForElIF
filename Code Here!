@@ -1,0 +1,41 @@
+import Foundation
+
+func main() -> (){
+    
+    let text1 = "This string contains OnlY leTTers"
+    let text2 = "This 28 string have some 392 numbers"
+    
+    print( "text1: \(text1)")
+    print( "text2: \(text2)")
+    
+    print()
+    
+    print( "text1 have numbers? \( !noNumbers( text1 ) )")
+    print( "text2 have numbers? \( !noNumbers( text2 ) )")
+    
+    print()
+    
+    //print( "Regex: text1 have numbers? \( !noNumbers_regex( text1 ) )")
+    //print( "Regex: text2 have numbers? \( !noNumbers_regex( text2 ) )")
+}
+
+
+func noNumbers( _ text:String ) -> Bool {
+    
+    for char in text.characters {
+        
+        if ("0"..."9").contains( char ) {
+            
+            return false
+        }
+    }
+    
+    return true
+}
+
+/*
+ func noNumbers_regex( _ text:String ) -> Bool {
+ 
+ let pattern = ".*\\d+.*"
+ */
+
